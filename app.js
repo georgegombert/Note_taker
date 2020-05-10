@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 var noteData = require("./Develop/db/db.json");
+const fs = require("fs");
 
 const app = express();
 const PORT = 3000;
@@ -29,12 +30,14 @@ app.get("/api/notes/:id", function(req, res) {
 
 app.post("/api/notes", function(req, res) {
     noteData.push(req.body);
+    fs.writeFile("./Develop/db/db.json",JSON.stringify(noteData), () => console.log("note Saved"));
     res.json(true);
 });
 
 app.delete("/api/notes/:id", function(req, res) {
   const idCall = req.params.id;
   noteData = noteData.filter(note => note.id !== idCall);
+  fs.writeFile("./Develop/db/db.json",JSON.stringify(noteData), (err) => console.log(err));
   res.json(true);
 });
 
