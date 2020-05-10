@@ -27,7 +27,10 @@ app.get("/api/notes/:id", function(req, res) {
   return res.json(noteData[chosen]);
 });
 
-
+app.post("/api/notes", function(req, res) {
+    noteData.push(req.body);
+    res.json(true);
+});
 
 
 app.listen(PORT, function() {
