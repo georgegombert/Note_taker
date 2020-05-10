@@ -22,6 +22,11 @@ app.get("/api/notes", function (req, res) {
   return res.json(noteData);
 });
 
+app.get("/api/notes/:id", function(req, res) {
+  const chosen = req.params.id;
+  return res.json(noteData[chosen]);
+});
+
 
 
 
