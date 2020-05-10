@@ -32,6 +32,12 @@ app.post("/api/notes", function(req, res) {
     res.json(true);
 });
 
+app.delete("/api/notes/:id", function(req, res) {
+  const idCall = req.params.id;
+  noteData = noteData.filter(note => note.id !== idCall);
+  res.json(true);
+});
+
 
 app.listen(PORT, function() {
   console.log("App listening on PORT " + PORT);
