@@ -1,5 +1,5 @@
 ## Note Taker 
-  ![Version](https://img.shields.io/badge/Version-1.0-green)
+  ![Version](https://img.shields.io/badge/Version-1.1-green)
   ****
   ![Note app](./Develop/screen_shot.png)
 
@@ -37,4 +37,6 @@ node server.js
   If you have any questions or have found issues with the program, please reach out to George
   <img src="https://avatars3.githubusercontent.com/u/59551782?v=4" alt="Github Avatar" width="200"/> [Email](georgegombert@gmail.com)
   ### Project Status
-  Project fully operational and deployed. Plans for the future include making multiple accounts to take notes on for different individuals. Plans also include na edit feature on the notes.
+  Project fully operational and deployed. Plans for the future include making multiple accounts to take notes on for different individuals. Plans also include an edit feature on the notes.
+
+  Update 5/11/20 - Edit feature fully operational. Notes can now be edited and saved again to be updated.
