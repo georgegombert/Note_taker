@@ -3,10 +3,10 @@
   ****
   ![Note app](./Develop/screen_shot.png)
 
-  [Go to deployed website ====>](https://dry-harbor-34594.herokuapp.com/notes "Note Taker App")
+  [Go to deployed website ====>](https://dry-harbor-34594.herokuapp.com "Note Taker App")
 
   ### Description
-  This project is a server side note taking app that will be able to create, store, and delete notes that the user provides. It is an express server based application that will store note data and display it to the user through the page url found [here](https://dry-harbor-34594.herokuapp.com/notes "Note Taker App") 
+  This project is a server side note taking app that will be able to create, store, and delete notes that the user provides. It is an express server based application that will store note data and display it to the user through the page url found [here](https://dry-harbor-34594.herokuapp.com "Note Taker App") 
   ### Table of Contents
   [Installation](#Installation)
   [Usage](#Usage)
