@@ -1,13 +1,14 @@
-var $noteTitle = $(".note-title");
-var $noteText = $(".note-textarea");
-var $saveNoteBtn = $(".save-note");
-var $newNoteBtn = $(".new-note");
-var $noteList = $(".list-container .list-group");
+const $noteTitle = $(".note-title");
+const $noteText = $(".note-textarea");
+const $saveNoteBtn = $(".save-note");
+const $newNoteBtn = $(".new-note");
+const $editNoteBtn = $(".edit-note");
+const $noteList = $(".list-container .list-group");
 
 // activeNote is used to keep track of the note in the textarea
 var activeNote = {};
 let idIndex = 0; //initializing note id variable that gives each note a unique id
-
+$editNoteBtn.hide();
 // A function for getting all notes from the db
 var getNotes = function() {
   return $.ajax({
@@ -36,6 +37,7 @@ var deleteNote = function(id) {
 // If there is an activeNote, display it, otherwise render empty inputs
 var renderActiveNote = function() {
   $saveNoteBtn.hide();
+  $editNoteBtn.show();
 
   if (activeNote.id) {
     $noteTitle.attr("readonly", true);
@@ -61,7 +63,7 @@ var handleNoteSave = function() {
   saveNote(newNote).then(function(data) {
     getAndRenderNotes();
     renderActiveNote();
-    
+    $editNoteBtn.hide();
   });
 };
 
@@ -94,6 +96,7 @@ var handleNoteView = function() {
 var handleNewNoteView = function() {
   activeNote = {};
   renderActiveNote();
+  $editNoteBtn.hide();
 };
 
 // If a note's title or text are empty, hide the save button
@@ -101,8 +104,10 @@ var handleNewNoteView = function() {
 var handleRenderSaveBtn = function() {
   if (!$noteTitle.val().trim() || !$noteText.val().trim()) {
     $saveNoteBtn.hide();
+    $editNoteBtn.hide();
   } else {
     $saveNoteBtn.show();
+    $editNoteBtn.hide();
   }
 };
 
