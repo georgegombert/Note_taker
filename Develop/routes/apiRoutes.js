@@ -20,7 +20,7 @@ module.exports = app => {
   // ---------------------------------------------------------------------------
   app.post("/api/notes", function (req, res) {
     noteData.push(req.body);
-    fs.writeFile("./Develop/db/db.json", JSON.stringify(noteData), () => console.log("note Saved"));
+    fs.writeFile("./Develop/db/db.json", JSON.stringify(noteData), () => {});
     res.json(true);
   });
   

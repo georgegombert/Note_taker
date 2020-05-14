@@ -2,7 +2,7 @@
 const express = require("express");
 const path = require("path");
 const app = express();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3000;
 
 //middleware used to attach styling and scripts to public files and parse data
 app.use(express.urlencoded({ extended: true }));
