@@ -108,7 +108,6 @@ const handleNoteDelete = function(event) {
 
 // Sets the activeNote and displays it
 const handleNoteView = function() {
-  console.log(this);
   activeNote = $(this).data();
   renderActiveNote();
 };
@@ -121,11 +120,8 @@ const handleNewNoteView = function() {
 };
 
 const editCurrentNote = () => {
-  console.log("working");
-  console.log(activeNote);
   renderEditNote(activeNote);
   deleteNote(activeNote.id);
-  console.log("working after");
 };
 
 // If a note's title or text are empty, hide the save button

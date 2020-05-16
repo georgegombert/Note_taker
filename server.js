@@ -7,11 +7,11 @@ const PORT = process.env.PORT || 3000;
 //middleware used to attach styling and scripts to public files and parse data
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static(path.join(__dirname, '/Develop/public')));
+app.use(express.static(path.join(__dirname, '/develop/public')));
 
 //routing data for the api and html via their respective files
-require("./Develop/routes/apiRoutes")(app);
-require("./Develop/routes/htmlRoutes")(app);
+require("./develop/routes/apiRoutes")(app);
+require("./develop/routes/htmlRoutes")(app);
 
 //starting server
 app.listen(PORT, function() {
